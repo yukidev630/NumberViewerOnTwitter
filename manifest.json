@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Number Viewer on X",
+  "version": "1.0",
+  "description": "いいね数を詳細に表示するChrome拡張機能",
+  "permissions": [
+    "storage" 
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Number Viewer on X"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
